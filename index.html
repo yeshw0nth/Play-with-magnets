@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Magnetic Powder Sim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Super Magnetic Powder Simulator</h1>
+    <div class="controls">
+        <p><strong>Instructions:</strong></p>
+        <ul>
+            <li><strong>Left-click</strong> on the powder to add an **Attracting** magnet (Red).</li>
+            <li><strong>Right-click</strong> on the powder to add a **Repelling** magnet (Blue).</li>
+            <li><strong>Click and drag</strong> an existing magnet to move it.</li>
+        </ul>
+
+        <div class="control-group">
+            <label for="magnetStrength">Magnet Strength:</label>
+            <input type="range" id="magnetStrength" min="1000" max="20000" value="5000">
+            <span id="strengthValue">5000</span>
+        </div>
+
+        <div class="control-group">
+             <label for="magnetSize">Magnet Size:</label>
+             <input type="range" id="magnetSize" min="5" max="40" value="15">
+             <span id="sizeValue">15</span>
+         </div>
+
+        <div class="button-group">
+            <button id="eraserButton">Eraser Mode</button>
+            <button id="addParticlesButton">Add More Particles</button>
+            <button id="clearButton">Clear All</button>
+        </div>
+
+        <p id="currentMode">Current Mode: Add Magnets</p>
+
+    </div>
+
+    <canvas id="simulationCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
